@@ -12,7 +12,7 @@ The project involves programming an EPSON VT6-A901S six-axis industrial robot to
 
 **Watch the robot perform the complete pick-and-place sequence:**
 <a href="assets/demo-thumbnail.jpg)](https://livemdxac-my.sharepoint.com/personal/aa6724_live_mdx_ac_uk/_layouts/15/stream.aspx?id=%2Fpersonal%2Faa6724%5Flive%5Fmdx%5Fac%5Fuk%2FDocuments%2FAkamksha%20Ranil%20%2D%20Robot%20Manipulation%20%2D%20PDE4431%20demonstration%2Emp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E07d9fb06%2D4b07%2D49ca%2Da092%2Ddadfc45d9551">
-  <img src="assets/demo-thumbnail.jpg" width="600" alt="EPSON VT6 Pick-and-Place Demonstration">
+  <img src="assets/demo-thumbnail.jpg" width="400" alt="EPSON VT6 Pick-and-Place Demonstration">
 </a>
 
 *Click the image to watch the complete demonstration.*
