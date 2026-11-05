@@ -1,0 +1,88 @@
+Function main
+    Motor On
+    Power High
+    'Calling functions
+    Call Pick
+    Call Drop1
+    Call Pick
+    Call Drop2
+    Call Pick
+    Call Drop3
+    Power Low
+    Motor Off
+Fend
+
+Function Grip_open
+    Off 11
+Fend
+Function Grip_close
+    On 11
+Fend
+Function Pick
+    'Open gripper at start for ease for closed gripper: ON 11
+    Call Grip_open
+    'Introduce a delay so that the gripper can open in time
+    Go home_ref
+    'Approach Point of Pick
+    Speed 30
+    Go pick_pt -TLZ(50)
+    Wait 1
+    'Pickup Point
+    Speed 20
+    Move pick_pt
+    'Wait for Robot to reach point then close gripper
+    Wait 1
+    Call Grip_close
+    'Wait for gripper to actually take the object
+    Wait 1
+    'Move to Retract Point
+    Speed 30
+    Move pick_pt -TLZ(50)
+    
+Fend
+
+Function Drop1
+    'Approach Point of Drop
+    Go drop_1 -TLZ(50)
+    'Drop Point
+    Speed 20
+    Move drop_1
+    'Wait for Robot to reach point then open gripper
+    Wait 1
+    Call Grip_open
+    'Wait for gripper to actually drop the object
+    Wait 1
+    'Move to Retract Point
+    Move drop_1 -TLZ(50)
+
+Fend
+Function Drop2
+    'Approach Point of Drop
+    Go drop_2 -TLZ(50)
+    'Drop Point
+    Speed 20
+    Move drop_2
+    'Wait for Robot to reach point then open gripper
+    Wait 1
+    Call Grip_open
+    'Wait for gripper to actually drop the object
+    Wait 1
+    'Move to Retract Point
+    Move drop_2 -TLZ(50)
+Fend
+Function Drop3
+        'Approach Point of Drop
+    Go drop_3 -TLZ(50)
+    'Drop Point
+    Speed 20
+    Move drop_3
+    'Wait for Robot to reach point then open gripper
+    Wait 1
+    Call Grip_open
+    'Wait for gripper to actually drop the object
+    Wait 1
+    'Move to Retract Point
+    Move drop_3 -TLZ(50)
+'Go to home_pt
+    Go home_ref
+Fend
