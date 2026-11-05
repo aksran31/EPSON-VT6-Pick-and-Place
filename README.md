@@ -11,6 +11,7 @@ The project involves programming an EPSON VT6-A901S six-axis industrial robot to
 ## 🎬 Project Demonstration
 
 **Watch the robot perform the complete pick-and-place sequence:**
+<br>
 <a href="https://1drv.ms/v/c/890c690613b2da64/IQB49GeFj5JzT66jOieI5F0pAXbptwqbO62AriyYVvGgLVQ?e=oGm4Ge">
   <img src="assets/demo-thumbnail.jpg" width="400" alt="EPSON VT6 Pick-and-Place Demonstration">
 </a>
