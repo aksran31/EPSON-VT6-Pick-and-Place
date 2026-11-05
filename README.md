@@ -12,7 +12,9 @@ The project involves programming an EPSON VT6-A901S six-axis industrial robot to
 
 **Watch the robot perform the complete pick-and-place sequence:**
 
-[▶️ Watch the Demonstration Video](https://livemdxac-my.sharepoint.com/personal/aa6724_live_mdx_ac_uk/_layouts/15/stream.aspx?id=%2Fpersonal%2Faa6724%5Flive%5Fmdx%5Fac%5Fuk%2FDocuments%2FAkamksha%20Ranil%20%2D%20Robot%20Manipulation%20%2D%20PDE4431%20demonstration%2Emp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E07d9fb06%2D4b07%2D49ca%2Da092%2Ddadfc45d9551)
+[![Pick-and-Place Demonstration](assets/demo-thumbnail.jpg)](https://livemdxac-my.sharepoint.com/personal/aa6724_live_mdx_ac_uk/_layouts/15/stream.aspx?id=%2Fpersonal%2Faa6724%5Flive%5Fmdx%5Fac%5Fuk%2FDocuments%2FAkamksha%20Ranil%20%2D%20Robot%20Manipulation%20%2D%20PDE4431%20demonstration%2Emp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E07d9fb06%2D4b07%2D49ca%2Da092%2Ddadfc45d9551)
+
+*Click the image to watch the complete demonstration.*
 
 ---
 
@@ -23,6 +25,7 @@ The objective of this project was to develop and implement an automated pick-and
 The robot executes a programmed sequence involving object pickup, transfer, and placement at multiple predefined locations.
 
 The operation consists of:
+
 - Initialising the robot and moving to the designated home position.
 - Approaching the pickup location using a predefined approach height.
 - Activating the gripper to securely pick up the workpiece.
@@ -47,19 +50,31 @@ The operation consists of:
 | Workpiece | Ping-pong balls |
 | Placement surface | Steel plate |
 
+### Robot Setup
+
+![EPSON Robot Setup](assets/robot-setup.jpg)
+
+*EPSON industrial robot and end-of-arm tooling used for the practical task.*
+
+### Assigned Placement Pattern
+
+![Placement Pattern](assets/placement-pattern.jpg)
+
+*Designated pickup and placement arrangement for the pick-and-place operation.*
+
 ## ⚙️ Technical Implementation
 
 ### Robot Positioning and Motion Control
 
 Robot positions were taught using the EPSON RC+ programming environment. Separate positions were defined for the home position, pickup location and three placement locations.
 
-The `GO` and `MOVE` commands were used to control robot movement. Approach and retract positions were generated using a 50 mm tool Z-axis offset through the `TLZ(50)` function.
+The `GO` and `MOVE` commands were used to control robot movement. Approach and retract positions were generated using a 50 mm tool Z-axis offset through the `TLZ(50)` function, with the offset direction selected according to the required approach geometry.
 
 ### Tool Offset Implementation
 
 The `TLZ(50)` instruction was used to generate approach and retract positions relative to the tool coordinate system.
 
-This allowed the robot to approach and withdraw from the pickup and placement locations while maintaining additional vertical clearance.
+In the implemented program, `-TLZ(50)` was applied to the taught pickup and placement points to create offset positions. This allowed the robot to approach and withdraw from the working locations while maintaining additional clearance.
 
 ### Gripper Control
 
@@ -96,10 +111,11 @@ After completing all three placement operations, the robot returns to the design
 
 ## 📂 Repository Contents
 
-| File | Description |
+| File / Folder | Description |
 |---|---|
 | `Main.prg` | Complete SPEL+ source code |
 | `README.md` | Project documentation |
+| `assets/` | Project photographs and demonstration thumbnail |
 
 ## 🧠 Key Learning Outcomes
 
@@ -134,4 +150,3 @@ Possible extensions to the project include:
 
 **Course:** PDE4431 – Robotic Manipulation  
 **Institution:** Middlesex University Dubai
-
