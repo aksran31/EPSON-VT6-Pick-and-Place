@@ -1,2 +1,0 @@
-this is a test case
-when u click on commeit it will commit and then ask u to sync changes
